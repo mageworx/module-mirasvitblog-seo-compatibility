@@ -1,0 +1,1 @@
+# module-mirasvitblog-seo-compatibility
