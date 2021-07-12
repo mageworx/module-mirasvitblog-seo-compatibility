@@ -51,7 +51,7 @@ class Generator
      */
     public function generate($storeId)
     {
-        if (!$this->helper->isBlogPagesEnabled()) {
+        if (!$this->helper->isBlogPagesEnabled($storeId)) {
             return [];
         }
 
