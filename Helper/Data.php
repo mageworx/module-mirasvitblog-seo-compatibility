@@ -15,7 +15,7 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
     /**
      * XML config path show Mirasvit Blog Pages
      */
-    const XML_PATH_ADD_BLOG_PAGES = 'mageworx_seo/xml_sitemap_mirasvit_blog/add_blog_pages';
+    const XML_PATH_ADD_BLOG_PAGES = 'mageworx_seo/xml_sitemap/xml_sitemap_mirasvit_blog/add_blog_pages';
 
     /**
      * XML config path add post pages
@@ -68,12 +68,12 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
      *
      * @return bool
      */
-    public function isBlogPagesEnabled()
+    public function isBlogPagesEnabled($storeId)
     {
         return $this->scopeConfig->isSetFlag(
             self::XML_PATH_ADD_BLOG_PAGES,
             ScopeInterface::SCOPE_STORE,
-            $this->storeId
+            $storeId
         );
     }
 
